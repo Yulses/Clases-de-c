@@ -16,6 +16,8 @@
 /////////////////////////////////////
 //			Esqueleto de Funciones
 /////////////////////////////////////
+void quintaria();
+void cuarta();
 void tercearia();
 void secundaria();
 /////////////////////////////////////
@@ -25,7 +27,7 @@ int main(){
 	printf("hola mundo: %c \n",constante);
 	printf("Hola que tal Ulises %c\n",constanteChar);
 
-	tercearia();
+	quintaria();
 	printf("Se terminaron de ejecutar las funciones\n");
 	return 1;
 }
@@ -33,6 +35,18 @@ int main(){
 /////////////////////////////////////
 //					Definicion de Funciones
 /////////////////////////////////////
+void quintaria(){
+	// Definicion
+	cuarta();
+	printf("hola mundo, soy la Funcion quintaria: \n");
+	//
+}
+void cuarta(){
+	// Definicion
+	tercearia();
+	printf("hola mundo, soy la Funcion cuarta: \n");
+	//
+}
 void tercearia(){
 	// Definicion
 	secundaria();

@@ -2,7 +2,14 @@
 //        Formatos de prinf
 //////////////////////////////////
 
-%d  imprime enteros
-%c  imprime caracteres
-%f
-%i
+%d o %i imprime decimales con signo de un entero
+%c  imprime el caracter ASCII correspondiente
+%f  Imprime numeros decimales
+%x  conversion hexadecimal sin signo
+%p  Direccion de memoria (puntero)
+%e  Convercion a coma flotante con signo en notacion cientifica
+%g  Convercion a coma flotante, usando la notacion que requiera menor espacio
+%o  Convercion octal sin signo de un entero
+%u  Convercion decimal sin signo de un entero
+%s  Cadena de caracteres (terminada en "/0")
+%%  Imprime el simbolo %
