@@ -2,6 +2,7 @@
 #include<math.h>
 int determinaCiclos(int numero);
 void printfb(int numero);
+void printB(int numero);
 int main(){
   int numero= 59;
   printf("El numero es %d\n",numero );
@@ -9,6 +10,9 @@ int main(){
   printf("El numero es %x\n",numero );
   printf("El numero de ciclos es:%d\n",determinaCiclos(numero) );
   printfb(numero);
+  printf("\n" );
+  printB(numero);
+  printf("%X\n",-1 );
 }
 void printfb(int numero){
  int nciclos=determinaCiclos(numero);
@@ -22,7 +26,7 @@ void printfb(int numero){
    printf("%d",bit  );
    cicloActual++;
  }
- 
+
 }
 int determinaCiclos(int numero){
   int nciclos=0;
@@ -32,4 +36,25 @@ int determinaCiclos(int numero){
     nciclos++;
   }
   return nciclos;
+}
+void printB(int numero){
+  unsigned int recorredor=0x80000000;
+  int bandera=0;
+  int i=0;
+  while (i<32) {
+    if((recorredor&numero)!=0){
+      bandera=1;
+    }
+    if(bandera){
+      if((recorredor&numero)==0){
+        printf("0");
+      }
+      else{
+        printf("1");
+      }
+    }
+    i++;
+    recorredor=recorredor>>1;
+  }
+  printf("\n");
 }
